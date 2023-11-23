@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nikolina Šarac">
+    <meta name="description" content="Izrada HTML zadatka">
+    <meta name="subject" content="Predmet - RWA">
+
+    <title>Zadatak - HTML i CSS</title>
+    <style>
+        .image-section {
+            display: flex;
+            align-items: center; 
+        }
+
+        .text-section {
+            flex: 1; 
+            text-align: justify;
+            margin: 10px;
+        }
+
+        .text-section img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 10px; 
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            border: 1px solid black;
+            background-color: orange;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        aside {
+            border: 1px solid black;
+            background-color: blue;
+            height: 750px;
+            width: 170px;
+            margin-right: 10px;
+            text-align: center;
+            
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .green-box {
+            padding: 10px;
+            border: 1px solid black;
+            background-color: green;
+            margin-bottom: 10px;
+            height: 600px; 
+            width: 100%;
+        }
+
+        .footer-container {
+            width: 100%;
+            border: 1px solid black;
+            background-color: yellow;
+            padding: 10px;
+            text-align: center;
+            height: 100px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate; 
+            border-spacing: 10px; 
+            border-color: orange;
+            margin-top: 10px;
+        }
+
+        th {
+            border: 2px solid white;
+            padding: 8px;
+            text-align: center;
+            color: white;
+        }
+
+        td {
+            border: 1px solid yellow;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Zadatak 1 - HTML i CSS</h1>
+        <h2>Predmet - Razvoj Web Aplikacija</h2>
+        <h3>Student - Nikolina Šarac</h3>
+        <h4>Kontaktirajte autora na <a href="mailto:nikolina.sarac@fsre.sum.ba">nikolina.sarac@fsre.sum.ba</a></h4>
+        <h4>GitHub : <a href="https://github.com/NikolinaSarac">Nikolina Šarac</a></h4>
+    </header>
+
+    <div class="container">
+        <aside>
+            <h1>C</h1><br>
+            <h1>V</h1><br>
+            <h1>I</h1><br>
+            <h1>J</h1><br>
+            <h1>E</h1><br>
+            <h1>T</h1><br>
+        </aside>
+
+        <div class="main-content">
+            <div class="green-box">
+                <div class="image-section">
+                    <img src="https://img1.picmix.com/output/stamp/normal/6/3/3/3/1303336_d4231.png" alt="Opis slike">
+                    <div class="text-section">
+                        <h1>Cvijet</h1>
+                        <p><h3>Sastavni dijelovi cvijeta <br>
+                            Cvjetište - (lat. receptaculum), nosi na sebi ostale dijelove cvijeta, može biti čunjasto prošireno, pločasto prošireno ili vrčasto udubljeno <br>
+                            1. cvijeće - (lat. perianthium), sastoji se od čaške s lapovima i vjenčića s laticama<br>
+                            2. Prašnici - (lat. andreceum), preobraženi su mikrosporofili, sastoje se od prašničke niti (filamenta), koji na svom vrhu nosi dvije antere ili polenovnice, antere su na filament pričvršćene pomoću veze ili konektiva <br>
+                            3. Tučak - (lat. gyneceum), može biti samo jedan ili ih ima više, sastavni dijelovi su: plodnica, vrat i njuška tučka <br>
+                            4. Prašnici i tučak tulipana<br>
+                            5. Lapovi<br>
+                            6. Latice</h3><br></p>
+
+                            <table border="3px">
+                                <tr>
+                                    <th>Vrsta</th>
+                                    <th>Boja</th>
+                                    <th>Latinski</th>
+                                </tr>
+                                <tr>
+                                    <td>Ruža</td>
+                                    <td>Crvena</td>
+                                    <td>Rosa</td>
+                                </tr>
+                                <tr>
+                                    <td>Ljiljan</td>
+                                    <td>Ljubičasta</td>
+                                    <td>Lilium regale</td>
+                                </tr>
+                                <tr>
+                                    <td>Tulipan</td>
+                                    <td>Žuta</td>
+                                    <td>Liliaceae</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-container">
+                <p>Linkovi za FSRE i SUM :</p><br>
+                <a href="https://fsre.sum.ba/">FSRE</a><br>
+                <a href="https://www.sum.ba/">Sveučilište u Mostaru</a>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
