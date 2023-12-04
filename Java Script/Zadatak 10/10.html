@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 10</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+        function ispisRandomBrojeva(min, max) {
+            for (var i = 0; i < 5; i++) {
+                var randomBroj = Math.floor(Math.random() * (max - min + 1)) + min;
+                console.log(randomBroj);
+            }
+        }
+
+
+        ispisRandomBrojeva(1, 100);
+
+        </script>
+    </body>
+</html>

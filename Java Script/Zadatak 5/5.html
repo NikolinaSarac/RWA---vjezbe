@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 5</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var osoba1 = {
+                firstName: "Marko",
+                lastName: "Maric",
+                age: 40,
+                eyeColor: "crna"
+            };
+
+            var osoba2 = { firstName: "Ana", lastName: "Anić", age: 28, eyeColor: "plava" };
+            var osoba3 = { firstName: "Ivan", lastName: "Ivanić", age: 35, eyeColor: "zelena" };
+
+            var nizOsoba = [osoba1, osoba2, osoba3];
+
+            for (var i = 0; i < nizOsoba.length; i++) {
+                var trenutnaOsoba = nizOsoba[i];
+                console.log("Indeks: " + i);
+                console.log("Ime: " + trenutnaOsoba.firstName);
+                console.log("Prezime: " + trenutnaOsoba.lastName);
+                console.log("Dob: " + trenutnaOsoba.age);
+                console.log("Boja očiju: " + trenutnaOsoba.eyeColor);
+                console.log("----------------------");
+            }
+
+        </script>
+    </body>
+</html>

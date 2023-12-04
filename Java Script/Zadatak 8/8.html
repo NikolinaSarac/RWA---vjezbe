@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 8</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+            var arr = ['Ovo', 'je', 'My', 'prvi', 'komad', 'OF', 'JAVASCRIPT', 'koda', 'Koji', ', ', 'je', 'proradio'];
+
+            function filtrirajVrijednosti(arr) {
+                var novoPolje = arr.filter(function(vrijednost) {
+                    return vrijednost.toUpperCase() === vrijednost || vrijednost.length >= 5;
+                });
+
+                console.log("Novo polje:", novoPolje);
+                return novoPolje;
+            }
+
+            filtrirajVrijednosti(arr);
+
+        </script>
+    </body>
+</html>

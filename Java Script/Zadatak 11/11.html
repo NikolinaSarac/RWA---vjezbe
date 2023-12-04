@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 11</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+        const tempDay = ['2023-11-29', -1, 0, -0.5, 0.5, 0, 1.2, 1.8, 2, 3, 4, 6, 9, 12, 7, 6, 6, 8, 5, 4, 2, 3, 2, 1, 0];
+        
+        function analizirajTemperaturu(tempArray) {
+            const datum = tempArray[0];
+            const temperature = tempArray.slice(1);
+
+            const najmanjaTemperatura = Math.min(...temperature);
+            const najvecaTemperatura = Math.max(...temperature);
+            const prosjecnaTemperatura = temperature.reduce((acc, curr) => acc + curr, 0) / temperature.length;
+
+            console.log('Datum:', datum);
+            console.log('Najmanja temperatura:', najmanjaTemperatura);
+            console.log('Najveća temperatura:', najvecaTemperatura);
+            console.log('Prosječna temperatura:', prosjecnaTemperatura);
+        }
+        
+        analizirajTemperaturu(tempDay);
+
+
+        </script>
+    </body>
+</html>

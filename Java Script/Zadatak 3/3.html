@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 3</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+            function isProst(broj) {
+                for (var i = 2; i < broj; i++) {
+                    if (broj % i === 0) {
+                    return false; 
+                    }
+                }
+                return broj !== 1; 
+            }
+
+
+            function ispisiProsteBrojeve() {
+       
+                for (var i = 1; i <= 1000; i++) {
+            
+                    if (isProst(i)) {
+                        console.log(i);
+                        document.write(i + '<br>');
+                    }
+                }
+            }
+
+            ispisiProsteBrojeve();
+        </script>
+    </body>
+</html>

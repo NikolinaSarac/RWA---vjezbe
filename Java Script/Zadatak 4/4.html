@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 4</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            //a)
+            var polje = new Array(1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 12, 4, 85);
+            console.log('a. Inicijalna dužina polja: ' + polje.length);
+
+            //b)
+            var sortiranoOdNajveceg = polje.slice().sort(function(a, b) {
+                return b - a;
+            });
+
+            //c)
+            var sortiranoOdNajmanjeg = polje.slice().sort(function(a, b) {
+                return a - b;
+            });
+
+            //d)
+            sortiranoOdNajmanjeg.pop();
+            console.log('d. Sortirano polje bez zadnjeg člana: ' + sortiranoOdNajmanjeg);
+
+            //e)
+            sortiranoOdNajmanjeg.push(19, 22);
+            console.log('e. Sortirano polje s dodanim članovima: ' + sortiranoOdNajmanjeg);
+
+            //f)
+            var polje2 = ["Banana", "Orange", "Apple", "Mango"];
+
+            var polje_final = sortiranoOdNajmanjeg.concat(polje2);
+
+            console.log('f. Polje final: ' + polje_final);
+
+        </script>
+    </body>
+</html>

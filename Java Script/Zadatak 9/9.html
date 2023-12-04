@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Zadatak 9</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+
+            function jeSavrsenBroj(broj) {
+                var sum = 0;
+                for (var j = 1; j < broj; j++) {
+                    if (broj % j === 0) {
+                        sum += j;
+                    }
+                }
+                return sum === broj;
+            }
+
+            function ispisSavrsenihBrojeva(broj) {
+                for (var i = 1; i <= broj; i++) {
+                    if (jeSavrsenBroj(i)) {
+                        console.log(i);
+                    }
+                }
+            }
+
+            ispisSavrsenihBrojeva(100);
+
+
+        </script>
+    </body>
+</html>
