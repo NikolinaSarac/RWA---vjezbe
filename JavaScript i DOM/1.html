@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    
+    function izracunajAritmetickuSredinu(brojevi) {
+        var suma = 0;
+        for (var i = 0; i < brojevi.length; i++) {
+            suma += parseInt(brojevi[i]);
+        }
+        return suma / brojevi.length;
+    }
+
+    
+    function izracunajGeometrijskuSredinu(brojevi) {
+        var produkt = 1;
+        for (var i = 0; i < brojevi.length; i++) {
+            produkt *= parseInt(brojevi[i]);
+        }
+        return Math.pow(produkt, 1 / brojevi.length);
+    }
+
+    
+    var unosBrojeva = prompt("Unesite brojeve odvojene zarezom (npr. 1, 17, 25):");
+    
+    
+    var brojevi = unosBrojeva.split(',').map(function(item) {
+        return item.trim();
+    });
+
+    
+    var aritmetickaSredina = izracunajAritmetickuSredinu(brojevi);
+
+    
+    var geometrijskaSredina = izracunajGeometrijskuSredinu(brojevi);
+
+    
+    document.write("<p>Brojevi: " + brojevi.join(', ') + "</p>");
+    document.write("<p>Aritmetička sredina: " + aritmetickaSredina.toFixed(2) + "</p>");
+    document.write("<p>Geometrijska sredina: " + geometrijskaSredina.toFixed(2) + "</p>");
+</script>
+
+</body>
+</html>

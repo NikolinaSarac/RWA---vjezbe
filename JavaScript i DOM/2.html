@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8">
+            <title>Zadatak 2</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            
+            function generirajNasumicnuBoju() {
+                var boja = '#';
+                var moguceZnakovi = '0123456789ABCDEF';
+                for (var i = 0; i < 6; i++) {
+                    boja += moguceZnakovi[Math.floor(Math.random() * 16)];
+                }
+                return boja;
+            }
+
+            function promijeniPozadinu() {
+                var novaBoja = generirajNasumicnuBoju();
+                document.body.style.backgroundColor = novaBoja;
+                document.getElementById('trenutnaBoja').innerText = 'Trenutna boja: ' + novaBoja;
+            }
+        </script>
+
+        <button id="promijeniPozadinu" onclick="promijeniPozadinu()">Promijeni pozadinu</button>
+        <p id="trenutnaBoja">Trenutna boja: #FFFFFF</p>
+
+
+    </body>
+</html>

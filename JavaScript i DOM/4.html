@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 4</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    function prikaziOcjenjivanje() {
+        var ocjenaInput = document.getElementById('ocjena');
+        var ocjena = parseInt(ocjenaInput.value);
+
+        if (isNaN(ocjena) || ocjena < 1 || ocjena > 5) {
+            document.getElementById('rezultatOcjene').innerText = 'Molimo unesite ispravnu ocjenu od 1 do 5.';
+            return;
+        }
+
+        var rezultat = '';
+        switch (ocjena) {
+            case 1:
+                rezultat = 'Ocjena: 1 - Nedovoljan';
+                break;
+            case 2:
+                rezultat = 'Ocjena: 2 - Dovoljan';
+                break;
+            case 3:
+                rezultat = 'Ocjena: 3 - Dobar';
+                break;
+            case 4:
+                rezultat = 'Ocjena: 4 - Vrlo dobar';
+                break;
+            case 5:
+                rezultat = 'Ocjena: 5 - Odličan';
+                break;
+            default:
+                rezultat = 'Molimo unesite ispravnu ocjenu od 1 do 5.';
+        }
+
+        document.getElementById('rezultatOcjene').innerText = rezultat;
+    }
+</script>
+
+<form>
+    <label for="ocjena">Unesite ocjenu (1-5): </label>
+    <input type="text" id="ocjena" name="ocjena">
+    <button type="button" onclick="prikaziOcjenjivanje()">Prikaži ocjenu</button>
+</form>
+
+<p id="rezultatOcjene"></p>
+
+</body>
+</html>

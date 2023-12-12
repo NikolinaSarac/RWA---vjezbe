@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodavanje novih paragrafa</title>
+    <script language="javascript" type="text/javascript">
+        function dodajParagraf() {
+            // Kreiranje novog paragrafa
+            var noviParagraf = document.createElement('p');
+            noviParagraf.textContent = 'Novi paragraf teksta';
+
+            // Dohvaćanje mjesta gdje će se dodati novi paragrafi
+            var mjestoZaDodavanje = document.getElementById('thisLocation');
+
+            // Dodavanje novog paragrafa ispod mjesta za dodavanje
+            mjestoZaDodavanje.appendChild(noviParagraf);
+        }
+    </script>
+</head>
+<body>
+    <p><a href="#" onclick="dodajParagraf()">Kliknite ovdje da dodate novi paragraf teksta</a></p>
+    <div id="thisLocation">Novi paragrafi teksta će se pojaviti ispod</div>
+    <p>Ovo je defaultni prvi paragraf teksta</p>
+</body>
+</html>

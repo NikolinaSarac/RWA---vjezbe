@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8">
+            <title>Zadatak 3</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function prikaziOcjenjivanje() {
+                var ocjenaInput = document.getElementById('ocjena');
+                var ocjena = parseInt(ocjenaInput.value);
+
+                if (isNaN(ocjena) || ocjena < 1 || ocjena > 5) {
+                    alert('Molimo unesite ispravnu ocjenu od 1 do 5.');
+                    return;
+                }
+
+                switch (ocjena) {
+                    case 1:
+                        alert('Ocjena: 1 - Nedovoljan');
+                        break;
+                    case 2:
+                        alert('Ocjena: 2 - Dovoljan');
+                        break;
+                    case 3:
+                        alert('Ocjena: 3 - Dobar');
+                        break;
+                    case 4:
+                        alert('Ocjena: 4 - Vrlo dobar');
+                        break;
+                    case 5:
+                        alert('Ocjena: 5 - Odličan');
+                        break;
+                    default:
+                        alert('Molimo unesite ispravnu ocjenu od 1 do 5.');
+                }   
+            }
+
+
+        </script>
+
+    <form>
+        <label for="ocjena">Unesite ocjenu (1-5): </label>
+        <input type="text" id="ocjena" name="ocjena">
+        <button type="button" onclick="prikaziOcjenjivanje()">Prikaži ocjenu</button>
+    </form>
+
+    </body>
+</html>

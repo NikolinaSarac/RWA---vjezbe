@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 8</title>
+    <style>
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kalkulator</h2>
+
+    <form id="calculatorForm">
+        <label for="num1">Broj 1:</label>
+        <input type="text" id="num1" name="num1">
+        <br><br>
+        <label for="num2">Broj 2:</label>
+        <input type="text" id="num2" name="num2">
+        <br><br>
+
+        <button type="button" onclick="izracunaj('zbroji')">+</button>
+        <button type="button" onclick="izracunaj('oduzmi')">-</button>
+        <button type="button" onclick="izracunaj('pomnozi')">*</button>
+        <button type="button" onclick="izracunaj('podijeli')">/</button>
+        <br><br>
+        <button type="button" onclick="izracunaj('sinus')">sin</button>
+        <button type="button" onclick="izracunaj('kosinus')">kos</button>
+        <button type="button" onclick="izracunaj('tangens')">tan</button>
+        <br><br>
+        <button type="button" onclick="izracunaj('logaritam')">ln</button>
+        <button type="button" onclick="izracunaj('logaritam10')">log</button>
+        <br><br>
+        <button type="button" onclick="izracunaj('kvadriraj')">^2</button>
+        <button type="button" onclick="izracunaj('kubiraj')">^3</button>
+        <button type="button" onclick="izracunaj('potenciraj')">^n</button>
+
+    </form>
+
+
+    <script type="text/javascript">
+        function izracunaj(operacija) {
+            var broj1 = parseFloat(document.getElementById('num1').value);
+            var broj2 = parseFloat(document.getElementById('num2').value);
+            var rezultat;
+
+            switch (operacija) {
+                case 'zbroji':
+                    rezultat = broj1 + broj2;
+                    break;
+                case 'oduzmi':
+                    rezultat = broj1 - broj2;
+                    break;
+                case 'pomnozi':
+                    rezultat = broj1 * broj2;
+                    break;
+                case 'podijeli':
+                    if (broj2 !== 0) {
+                        rezultat = broj1 / broj2;
+                    } else {
+                        alert("Dijeljenje s nulom nije dozvoljeno.");
+                        return;
+                    }
+                    break;
+                case 'sinus':
+                    rezultat = Math.sin(broj1);
+                    break;
+                case 'kosinus':
+                    rezultat = Math.cos(broj1);
+                    break;
+                case 'tangens':
+                    rezultat = Math.tan(broj1);
+                    break;
+                case 'logaritam':
+                    rezultat = Math.log(broj1);
+                    break;
+                case 'logaritam10':
+                    rezultat = Math.log10(broj1);
+                    break;
+                case 'kvadriraj':
+                    rezultat = Math.pow(broj1, 2);
+                    break;
+                case 'kubiraj':
+                    rezultat = Math.pow(broj1, 3);
+                    break;
+                case 'potenciraj':
+                    rezultat = Math.pow(broj1, broj2);
+                    break;
+                default:
+                    alert("Nepoznata operacija.");
+                    return;
+            }
+            alert('Rezultat: ' + rezultat);
+        }
+    </script>
+</body>
+</html>

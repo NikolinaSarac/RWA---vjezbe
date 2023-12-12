@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 6</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function zbroji() {
+            var prviBrojInput = document.getElementById('prviBroj');
+            var drugiBrojInput = document.getElementById('drugiBroj');
+            
+            var prviBroj = parseFloat(prviBrojInput.value);
+            var drugiBroj = parseFloat(drugiBrojInput.value);
+
+            var rezultat = prviBroj + drugiBroj;
+
+            var rezultatPolje = document.getElementById('rezultat');
+            rezultatPolje.innerText = 'REZULTAT = ' + rezultat;
+
+            prviBrojInput.value = "";
+            drugiBrojInput.value = "";
+        }
+    </script>
+
+    <form>
+        <label for="prviBroj"> X = </label>
+        <input type="text" id="prviBroj" name="prviBroj">
+        <br> <br> 
+        <label for="drugiBroj"> Y = </label>
+        <input type="text" id="drugiBroj" name="drugiBroj">
+        <br> <br>
+        <button type="button" onclick="zbroji()">ZBROJI</button>
+        <br> <br> <br> <br>
+        <label id="rezultat"> REZULTAT = </label>
+        <input type="text" id="rezultatInput" name="rezultatInput" readonly>
+    </form>
+
+</body>
+</html>

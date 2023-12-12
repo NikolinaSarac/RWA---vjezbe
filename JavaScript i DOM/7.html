@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8">
+            <title>Zadatak 7</title>
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            function izracunaj() {
+                var danInput = document.getElementById('dan').value;
+                var mjesecInput = document.getElementById('mjesec').value;
+                var godinaInput = document.getElementById('godina').value;
+
+            
+                if (isNaN(danInput) || isNaN(mjesecInput) || isNaN(godinaInput)) {
+                    alert('Unesite ispravne podatke.');
+                    return;
+                }
+
+                var dan = parseInt(danInput);
+                var mjesec = parseInt(mjesecInput);
+                var godina = parseInt(godinaInput);
+
+                if (dan < 1 || dan > 31 || mjesec < 1 || mjesec > 12 || godina < 1900) {
+                    alert('Unesite ispravne podatke.');
+                    return;
+                }
+
+                var danas = new Date();
+                var rodjendan = new Date(godina, mjesec - 1, dan);
+
+                var razlika = danas - rodjendan;
+                var godine = Math.floor(razlika / (365.25 * 24 * 60 * 60 * 1000));
+
+                alert('Imate ' + godine + ' godina.');
+            }
+
+            function leadingZero(number) {
+            return number < 10 ? '0' + number : number;
+        }
+
+        </script>
+
+        <form>
+            <label for="dan">Unesite dan (01 - 31) </label>
+            <input type="text" id="dan" name="dan">
+            <br><br>
+            <label for="mjesec">Unesite mjesec (01 - 12) </label>
+            <input type="text" id="mjesec" name="mjesec">
+            <br><br>
+            <label for="godina">Unesite godinu (npr. 1987) </label>
+            <input type="text" id="godina" name="godina">
+            <br><br>
+            <button type="button" onclick="izracunaj()">Izračunaj</button>
+
+        </form>
+
+    </body>
+</html>
